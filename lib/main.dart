@@ -131,6 +131,7 @@ class _HomeState extends State<Home> {
                   if (value!.isEmpty) {
                     return "Insira o seu Peso!";
                   }
+                  return null;
                 },
               ), //TextField
 
@@ -150,6 +151,7 @@ class _HomeState extends State<Home> {
                   if (value!.isEmpty) {
                     return "Insira o sua Altura!";
                   }
+                  return null;
                 },
               ), //TextField
 
@@ -157,7 +159,7 @@ class _HomeState extends State<Home> {
                 padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
                 //Melhorando a cara do bottão usando um Container.
                 //definindo a altura do botão com height: 50
-                child: Container(
+                child: SizedBox(
                   height: 50,
                   child: ElevatedButton(
                     onPressed: (){
@@ -165,15 +167,15 @@ class _HomeState extends State<Home> {
                         _calculate();
                       }
                     },
-                    child: Text(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xff008000),
+                    ),
+                    child: const Text(
                       'Calcular',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 25,
                       ),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xff008000),
                     ),
                   ), //ElevatedButton
                 ),
