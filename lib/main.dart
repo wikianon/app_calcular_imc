@@ -157,7 +157,7 @@ class _HomeState extends State<Home> {
 
               Padding(
                 padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
-                //Melhorando a cara do bottão usando um Container.
+                //Melhorando a cara do bottão usando um SizedBox.
                 //definindo a altura do botão com height: 50
                 child: SizedBox(
                   height: 50,
